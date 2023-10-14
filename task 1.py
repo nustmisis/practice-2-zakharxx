@@ -21,7 +21,15 @@
 только годами из приведенной таблицы, а должна корректно обрабатывать все годы нашей эры.
 """
 
-year = input()
+def get_animal_by_year(year):
+    animals = ["Крыса", "Бык", "Тигр", "Кролик", "Дракон", "Змея", "Лошадь", "Коза", "Обезьяна", "Петух", "Собака", "Свинья"]
+    animal_number = (year - 4) % 12
+    return animals[animal_number]
 
+def main():
+    year = int(input("Введите год рождения: "))
+    animal = get_animal_by_year(year)
+    print("Вы родились в год {}.".format(animal))
 
-print() #Животное
+if __name__ == "__main__":
+    main()

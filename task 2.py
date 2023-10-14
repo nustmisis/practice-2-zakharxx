@@ -4,4 +4,14 @@
 выведите переменную  S = slam
 
 """
-S = "spaml"
+
+def change_string(s):
+    s = s[:1] + s[4:] + s[2:4]
+    return s
+    
+s = "spaml"
+s = change_string(s)
+print(s)
+
+
+
